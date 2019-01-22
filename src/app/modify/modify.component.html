@@ -1,0 +1,72 @@
+<app-header></app-header>
+<!-- <section class="top_banner">
+  <div class="container">
+    <div class="row">
+      <p class="text-center all_book_p">Modify book information.</p>
+    </div>
+  </div>
+</section>
+ -->
+<section id="intro" class="section-intro">
+  <div class="overlay">
+    <div class="container">
+      <div class="main-text">
+        <h1 class="intro-title"> Modify book in store </h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="content" style="margin-top: -100px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-9 col-md-offset-2 content">
+        <div class="page-ads box">
+          <!-- <h2 class="title-2">
+          Add a book resource!!
+          </h2> -->
+          <div *ngIf="error"> An error occured, please try again </div>
+          <form class='' enctype="multipart/formdata" [formGroup]="bookmodifyform" (ngSubmit)="modifybook(bookmodifyform.value)">
+            <div class="form-group">
+              <label>Title</label>
+              <input class="form-control" formControlName="title" placeholder="Title of book" type="text" required>
+            </div>
+            <div class=" form-group">
+              <label>Author</label>
+              <input class="form-control" formControlName="author" placeholder="Authors name" type="text" required value="{{ book.author }}">
+            </div>
+            <div class=" form-group">
+              <label>Year</label>
+              <input class="form-control" formControlName="year" placeholder="Year" type="text" required value="{{ book.year }}">
+            </div>
+            <div class=" form-group">
+              <label>No of pages</label>
+              <input class="form-control" formControlName="no_of_pages" placeholder="Number of pages" type="text" required value="{{ book.no_of_pages }}">
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea formControlName="description" class="form-control" rows="4" required> Story Story  </textarea>
+            </div>
+            <!-- <div class="form-group">
+  <label>File</label>
+  <input type="file" name="file">
+</div>
+ -->
+            <div class="form-group">
+              <label>Genre</label>
+              <select class="form-control" required formControlName="genre">
+                <option value="">Select a genre</option>
+                <option value="fictional">Fictional</option>
+                <option value="classical">Classical</option>
+                <option value="romantic">Romantic</option>
+              </select>
+            </div>
+            <button class="btn btn-success btn-style" type="submit" [disabled]="!bookmodifyform.valid || loading">
+              <span *ngIf='!loading'> Modify  </span>
+              <span *ngIf='loading'> Processing ...  </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

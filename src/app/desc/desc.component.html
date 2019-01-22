@@ -1,0 +1,74 @@
+<app-header></app-header>
+<!-- <section class="top_banner">
+  <div class="container">
+    <div class="row">
+      <p class="text-center all_book_p"> </p>
+    </div>
+  </div>
+</section>
+ -->
+<!-- 09056761644 - Rotimi garri -->
+<section id="intro" class="section-intro">
+  <div class="overlay">
+    <div class="container">
+      <div class="main-text">
+        <h1 class="intro-title"> {{ book?.title }} </h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row" style="margin-top: -50px; border-radius: 3px; background: whitesmoke; padding-bottom: 30px;">
+      <div class="col-md-6" style="background: white;">
+        <div class="text-center">
+          <!-- <i class="fa fa-book fa-4x text-center"></i> -->
+          <img src="/assets/download.png" style="margin-top: 150px; margin-bottom: 150px;">
+        </div>
+        </div>
+        <div class="col-md-6 ">
+          <div>
+            <div>
+              <div class="h_desc_value">
+                <label class="desc_caption_label">Title of book</label>
+                <p class="desc_value_p">{{ book.title }}</p>
+              </div>
+              <div class="h_desc_value">
+                <label class="desc_caption_label">Author of book</label>
+                <p class="desc_value_p">{{ book.author }}</p>
+              </div>
+              <!-- <div class="h_desc_value">
+  <label class="desc_caption_label">Book Category</label>
+  <p class="desc_value_p">{{ book.category }}</p>
+</div>
+ -->
+              <div class="h_desc_value">
+                <label class="desc_caption_label">Description of book</label>
+                <p class="desc_value_p">{{ book.description }}</p>
+              </div>
+              <!--  <div class="h_desc_value">
+                <label class="desc_caption_label">Uploaded</label>
+                <p class="desc_value_p">{{ book.created_at | book }}</p>
+              </div> -->
+              <div class="h_desc_value">
+                <label class="desc_caption_label">Genre</label>
+                <p class="desc_value_p">{{ book.genre }}</p>
+              </div>
+              <div class="h_desc_value">
+                <label class="desc_caption_label">Year of production</label>
+                <p class="desc_value_p">{{ book.year}}</p>
+              </div>
+              <div class="h_desc_value">
+                <label class="desc_caption_label">Number of pages</label>
+                <p class="desc_value_p">{{ book.no_of_pages }}</p>
+              </div>
+            </div>
+            <div style="margin-top: 30px; background: white; text-align: center; padding: 20px;">
+              <a routerLink="/{{ book._id }}/modify" ><div class="btn btn-primary">Modify</div></a>
+              <div class="btn btn-danger" (click)="delete(book._id)"> Delete </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

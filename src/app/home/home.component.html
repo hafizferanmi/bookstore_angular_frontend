@@ -1,0 +1,26 @@
+<app-header></app-header>
+<section id="intro" class="section-intro">
+  <div class="overlay">
+    <div class="container">
+      <div class="main-text">
+        <h1 class="intro-title">Welcome To <span style="color: #3498DB">BooKiSh</span></h1>
+        <p class="sub-title">Our book store</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row" style="background: whitesmoke;margin-top: -50px;border-radius: 3px;">
+      <div>
+        <div *ngFor="let book of books" class="col-md-4">
+          <div class="h_grid">
+            <i class="fa fa-book grid_fa"></i>
+            <div class="grid_book_title"> {{ book.title}} </div>
+            <a routerLink="/book/{{ book._id }}" class="text-center btn btn-primary grid_book_btn">view</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

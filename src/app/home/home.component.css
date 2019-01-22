@@ -1,0 +1,20 @@
+.h_grid {
+  background: rgba(108, 118, 124, .3);
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 30px 5px;
+
+}
+
+.grid_fa {}
+
+
+.grid_book_title {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.grid_book_btn {}
